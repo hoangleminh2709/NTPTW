@@ -1,0 +1,52 @@
+ <!DOCTYPE html> <!-- 1.doctype thiếu html -->
+<html lang="en">
+<head>
+    <title>Trang web</title> <!-- 2.thiếu đóng thẻ title -->
+    <meta charset="UTF-8">  <!-- 3.charset phải là UTF-8 chứ không phải utf8 -->
+</head>
+<body>
+    <h1>Welcome to ShopTLU</h1> <!-- 4.Đóng thẻ h1 phải là /h1 chứ k phải h1 -->
+    
+    <header>
+        <nav>
+            <a href="home">Trang chủ</a> <!-- 5.Đóng thẻ a phải là /a chứ k phải a -->
+            <a href="products">Sản phẩm</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h3>Sản phẩm hot</h3> 
+            <img src="iphone.jpg" alt="Iphone"> <!-- 6.Thẻ img thiếu dấu ngoặc kép + thiếu alt -->
+            <p>iPhone 16 Pro</p>
+            <p>Giá: <b>25.990.000đ</b></p> <!-- 7.Sai thứ tự đóng thẻ p và b -->
+        </section>
+        
+        <section>
+            <h3>Thông tin</h3>
+            <table>
+                <thead>
+                <tr>
+                    <td>Tên</td>
+                    <td>Giá</td>
+                </tr>
+                </thead>
+                <tr>
+                    <td>iPhone</td>
+                    <td>25tr</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    
+    <aside> <!-- 8.Dùng 2 thẻ main, thay thẻ main thành aside -->
+        <p>Sidebar content</p>
+    </aside>
+    
+    <footer>
+        <p>Copyright 2026</p> <!-- 9. Chưa đóng thẻ p -->
+    </footer>
+</body>
+
+</html> <!-- 10. Thiếu đóng thẻ html -->
+
