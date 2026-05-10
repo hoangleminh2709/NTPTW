@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Đăng ký tài khoản</h1>
+
+    <form action="#" method="POST">
+        
+        <!-- Fieldset 1: Thông tin cá nhân -->
+        <fieldset>
+            <legend>Thông tin cá nhân</legend>
+            
+            <div>
+                <label for="fullname">Họ tên:</label>
+                <input type="text" id="fullname" name="fullname" required minlength="2" maxlength="50" placeholder="Nguyễn Văn A">
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+            </div>
+
+            <div>
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="09xxxxxxxx (10 chữ số)">
+            </div>
+
+            <div>
+                <label for="dob">Ngày sinh:</label>
+                <input type="date" id="dob" name="dob" max="2026-05-09" placeholder="dd/mm/yyyy">
+            </div>
+
+            <div class="radio-group">
+                <label>Giới tính:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Nam</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Nữ</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Khác</label>
+            </div>
+        </fieldset>
+
+        <!-- Fieldset 2: Tài khoản -->
+        <fieldset>
+            <legend>Tài khoản</legend>
+
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" 
+                       pattern="^[A-Za-z0-9_]{3,20}$" 
+                       placeholder="Chữ cái, số, gạch dưới (3-20 ký tự)">
+            </div>
+
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" 
+                       required minlength="8" 
+                       pattern="^(?=.*[A-Z])(?=.*\d).+$"
+                       placeholder="Ít nhất 8 ký tự, 1 chữ hoa, 1 số">
+            </div>
+
+            <div>
+                <label for="confirm_password">Xác nhận password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" 
+                       required minlength="8" 
+                       pattern="^(?=.*[A-Z])(?=.*\d).+$"
+                       placeholder="Nhập lại mật khẩu">
+            </div>
+        </fieldset>
+
+        <!-- Fieldset 3: Thông tin giao hàng -->
+        <fieldset>
+            <legend>Thông tin giao hàng</legend>
+
+            <div>
+                <label for="city">Thành phố:</label>
+                <select id="city" name="city">
+                    <option value="">-- Chọn Thành phố --</option>
+                    <option value="hanoi">Hà Nội</option>
+                    <option value="hcm">TP. Hồ Chí Minh</option>
+                    <option value="danang">Đà Nẵng</option>
+                    <option value="cantho">Cần Thơ</option>
+                    <option value="haiphong">Hải Phòng</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="district">Quận/Huyện:</label>
+                <select id="district" name="district">
+                    <option value="">-- Chọn Quận/Huyện --</option>
+                    <option value="dist1">Quận 1</option>
+                    <option value="dist2">Quận 2</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="address">Địa chỉ chi tiết:</label>
+                <textarea id="address" name="address" rows="3" placeholder="Số nhà, tên đường..."></textarea>
+            </div>
+        </fieldset>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">Tôi đồng ý với điều khoản và điều kiện của cửa hàng.</label>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <button type="submit">Đăng ký ngay</button>
+            <button type="reset">Nhập lại từ đầu</button>
+        </div>
+
+    </form>
+</body>
+</html>
